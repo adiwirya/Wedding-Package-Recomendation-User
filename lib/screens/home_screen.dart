@@ -50,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                             child: const Padding(
                               padding: EdgeInsets.symmetric(vertical: 16),
                               child: Text(
-                                "Let's get started",
+                                "Mulai",
                                 style: TextStyle(
                                   fontSize: 15,
                                   color: Colors.white,

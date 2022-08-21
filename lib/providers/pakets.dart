@@ -131,7 +131,7 @@ class Pakets with ChangeNotifier {
     try {
       final response = await http.delete(url);
       final obj = json.decode(response.body);
-      if (obj['message'] == "Data was Deleted") {
+      if (obj['message'] == "Data Telah Dihapus") {
         _pakets.removeAt(index);
         notifyListeners();
       }
@@ -177,7 +177,7 @@ class Pakets with ChangeNotifier {
             'detail': paket.detail,
           }));
       final obj = json.decode(response.body);
-      if (obj['message'] == "Data Created") {
+      if (obj['message'] == "Data Telah Ditambahkan") {
         final newPaket = Paket(
           id: paket.id,
           nama: paket.nama,
@@ -251,7 +251,7 @@ class Pakets with ChangeNotifier {
             'detail': paket.detail,
           }));
       final obj = json.decode(response.body);
-      if (obj['message'] == "Data Updated") {
+      if (obj['message'] == "Data Telah Diupdate") {
         _pakets[index] = paket;
         notifyListeners();
       }

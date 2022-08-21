@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 class Criteria with ChangeNotifier {
   int dekorasi;
   int bridal;
-  int catering;
+  int katering;
   int dokumentasi;
   int venue;
   int entertaiment;
@@ -20,7 +20,7 @@ class Criteria with ChangeNotifier {
   Criteria({
     required this.dekorasi,
     required this.bridal,
-    required this.catering,
+    required this.katering,
     required this.dokumentasi,
     required this.venue,
     required this.entertaiment,
@@ -54,7 +54,7 @@ class Result with ChangeNotifier {
       nama: json['nama'],
       image: json['image'],
       harga: json['harga'],
-      nilai: json['total'],
+      nilai: json['total'].toDouble(),
     );
   }
 }
@@ -70,32 +70,32 @@ class Results with ChangeNotifier {
     final url = Uri.https('skripsi-spk-saw.herokuapp.com', '/api/paket/rec/');
 
     // try {
-      final response = await http.post(url,
-          headers: {
-            'Content-Type': 'application/json; charset=UTF-8',
-          },
-          body: json.encode({
-            "dekorasi": criteria.dekorasi,
-            "bridal": criteria.bridal,
-            "catering": criteria.catering,
-            "dokumentasi": criteria.dokumentasi,
-            "venue": criteria.venue,
-            "entertaiment": criteria.entertaiment,
-            "jumlahTamu": criteria.tamu,
-            "totalHarga": criteria.harga,
-            "car": criteria.car,
-            "cake": criteria.cake,
-            "crew": criteria.crew,
-            "live": criteria.live
-          }));
-      final jsonObj = json.decode(response.body);
+    final response = await http.post(url,
+        headers: {
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
+        body: json.encode({
+          "dekorasi": criteria.dekorasi,
+          "bridal": criteria.bridal,
+          "katering": criteria.katering,
+          "dokumentasi": criteria.dokumentasi,
+          "venue": criteria.venue,
+          "entertaiment": criteria.entertaiment,
+          "jumlahTamu": criteria.tamu,
+          "totalHarga": criteria.harga,
+          "car": criteria.car,
+          "cake": criteria.cake,
+          "crew": criteria.crew,
+          "live": criteria.live
+        }));
+    final jsonObj = json.decode(response.body);
 
-      final List<Result> loadedResults = [];
-      for (int i = 0; i < jsonObj.length; i++) {
-        loadedResults.add(Result.fromJson(jsonObj[i]));
-      }
-      _results = loadedResults;
-      notifyListeners();
+    final List<Result> loadedResults = [];
+    for (int i = 0; i < jsonObj.length; i++) {
+      loadedResults.add(Result.fromJson(jsonObj[i]));
+    }
+    _results = loadedResults;
+    notifyListeners();
     // } catch (e) {
     //   rethrow;
     // }

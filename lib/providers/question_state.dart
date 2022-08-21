@@ -24,7 +24,7 @@ class QuestionState with ChangeNotifier {
     result = Criteria(
         dekorasi: answer[0],
         bridal: answer[1],
-        catering: answer[2],
+        katering: answer[2],
         dokumentasi: answer[3],
         venue: answer[4],
         entertaiment: answer[5],
@@ -34,7 +34,7 @@ class QuestionState with ChangeNotifier {
         crew: answer[9],
         tamu: answer[10],
         harga: answer[11]);
-        
+
     return result;
   }
 }

@@ -17,7 +17,8 @@ class CardItem extends StatelessWidget {
     final result = Provider.of<Result>(context, listen: false);
     return InkWell(
       onTap: () {
-        Navigator.of(context).pushNamed(ResultDetailScreen.routeName, arguments: result.id);
+        Navigator.of(context)
+            .pushNamed(ResultDetailScreen.routeName, arguments: result.id);
       },
       child: Card(
         shape: RoundedRectangleBorder(

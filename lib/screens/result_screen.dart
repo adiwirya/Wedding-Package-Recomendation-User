@@ -37,7 +37,7 @@ class _ResultScreenState extends State<ResultScreen> {
             backgroundColor: Colors.grey[50],
             elevation: 0,
             title: Text(
-              "Result",
+              "Hasil Rekomendasi",
               style: TextStyle(
                 color: Colors.pink[200],
               ),

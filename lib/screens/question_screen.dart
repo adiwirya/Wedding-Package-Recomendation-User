@@ -27,7 +27,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
             backgroundColor: Colors.grey[50],
             elevation: 0,
             title: Text(
-              'Question',
+              'Pertanyaan',
               style: TextStyle(
                 color: Colors.pink[200],
               ),
@@ -53,7 +53,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                 height: screenHeight * 0.3,
                               ),
                               Text(
-                                'Congrats! You have answered all questions',
+                                'Selamat! Kamu telah menjawab semua pertanyaan.',
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Colors.pink[200],
@@ -78,7 +78,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
                                     Navigator.of(context).pushReplacementNamed(
                                         ResultScreen.routeName);
                                   },
-                                  child: const Text("Submit Answer"),
+                                  child: const Text("Lihat hasil"),
                                   style: ElevatedButton.styleFrom(
                                     primary: Colors.pink[200],
                                   ),
@@ -179,7 +179,7 @@ class _QuestionTextState extends State<QuestionText> {
                               child: Container(
                                 margin: const EdgeInsets.only(left: 16),
                                 child: Text(
-                                  "Previous",
+                                  "Sebelumnya",
                                   style: TextStyle(color: Colors.indigo[900]),
                                 ),
                               ),
@@ -204,7 +204,7 @@ class _QuestionTextState extends State<QuestionText> {
                               child: Container(
                                 margin: const EdgeInsets.only(left: 16),
                                 child: Text(
-                                  "Next",
+                                  "Selanjutnya",
                                   style: TextStyle(color: Colors.indigo[900]),
                                 ),
                               ),

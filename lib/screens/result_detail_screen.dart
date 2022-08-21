@@ -49,7 +49,7 @@ class _ResultDetailScreenState extends State<ResultDetailScreen> {
           backgroundColor: Colors.grey[50],
           elevation: 0,
           title: Text(
-            'Detail',
+            'Detail Paket',
             style: TextStyle(
               color: Colors.pink[200],
             ),
@@ -97,13 +97,13 @@ class _ResultDetailScreenState extends State<ResultDetailScreen> {
                         height: 10,
                       ),
                       LogoList(
-                        text: paket.tamu.toString() + " Pax",
+                        text: paket.tamu.toString() + " Orang",
                         icon: Icons.wallet_travel,
                       ),
                       const SizedBox(
                         height: 10,
                       ),
-                      Text("Detail",
+                      Text("Deskripsi",
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
